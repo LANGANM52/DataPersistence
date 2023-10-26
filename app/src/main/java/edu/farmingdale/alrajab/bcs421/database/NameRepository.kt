@@ -46,5 +46,14 @@ class NameRepository private constructor(context: Context) {
 
     fun deleteUser(usr: User) = usrDao.delete(usr)
 
+    fun updateUser(userId: Long, newFirstName: String, newLastName: String) {
+        val existingUser = getUser(userId)
+        if (existingUser != null) {
+            val updatedUser = User(userId.toInt(), newFirstName, newLastName)
+            usrDao.updateUser(updatedUser)
+        }
+    }
+
+
 
 }

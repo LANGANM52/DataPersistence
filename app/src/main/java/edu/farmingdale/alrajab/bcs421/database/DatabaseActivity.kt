@@ -14,8 +14,6 @@ class DatabaseActivity : AppCompatActivity() {
 
     private lateinit var dbHelper:NameRepository
 
-    // ToDO: Database link to be completed
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDatabaseBinding.inflate(layoutInflater)
@@ -32,6 +30,9 @@ class DatabaseActivity : AppCompatActivity() {
     private fun writeData() {
         dbHelper.addUser(User("Course "+Random.nextInt(6000),
             "CSC "+Random.nextInt(6000)))
+        val firstName = binding.firstName.text.toString()
+        val lastName = binding.lastName.text.toString()
+        dbHelper.addUser(User(firstName, lastName))
 
     }
 

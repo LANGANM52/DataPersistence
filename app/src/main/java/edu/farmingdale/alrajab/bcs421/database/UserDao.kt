@@ -24,6 +24,9 @@ interface UserDao {
     @Query("SELECT * FROM users WHERE uid = :id")
     fun getUser(id: Long): User?
 
+    @Update
+    fun updateUser(user: User)
+
     @Delete
     fun delete(user: User)
 }

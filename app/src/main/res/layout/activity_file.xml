@@ -14,7 +14,19 @@
         android:id="@+id/enter_value"
         android:hint="To File"/>
 
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter First Name"
+        android:layout_marginTop="16dp" />
 
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Last Name"
+        android:layout_marginTop="16dp" />
 
 
     <Button
